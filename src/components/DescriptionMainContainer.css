@@ -1,0 +1,7 @@
+.readMore{
+  color: blue
+}
+
+.readMore:hover { 
+  text-decoration: underline;
+}
