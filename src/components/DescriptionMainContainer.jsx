@@ -1,37 +1,26 @@
 import React from 'react';
 import style from './DescriptionMainContainer.css'
 
-
 const DescriptionMainContainer = (props) => {
-  // console.log(props.RentalData.typeof())
 
-  let version = "goodbye"
+  let toShow = "loading........."
 
-  if (props.RentalData === "hello"){
-     version = "hello"
-  } 
-
-  // console.log(props.RentalData[0].entireRental)
-  //this is a test
-
-  return ( 
+  if(Object.keys(props.RentalData).length > 0){
+    toShow = 
     <div>
       <div>title</div>
       <div>
         <div>Entire Apartment</div>
-        <div>{props.RentalData[0].entireRental.numOfGuest} guests</div>
-        <div>{props.RentalData[0].entireRental.numOfBedroom} bedroom</div>
-        <div>{props.RentalData[0].entireRental.numOfBeds} beds</div>
-        <div>{props.RentalData[0].entireRental.numOfBathroom} baths</div>
+        <div>{props.RentalData.rentalData.entireRental.numOfGuest} guests</div>
+        <div>{props.RentalData.rentalData.entireRental.numOfBedroom} bedroom</div>
+        <div>{props.RentalData.rentalData.entireRental.numOfBeds} beds</div>
+        <div>{props.RentalData.rentalData.entireRental.numOfBathroom} baths</div>    
       </div>
 
-      <div>{version}</div>
-      <div>{props.RentalData[0].hostInfo.name} is a superhost </div>
-
-      <div>self check in: {props.RentalData[0].quickDetail.selfCheckin_lockBox}</div>
-      <div>sparkeling clean votes: {props.RentalData[0].quickDetail.recentSparklingCleanVotes}</div>
-  
-      <div>short write up: {props.RentalData[0].quickDetail.writtenDescription.brief}</div>
+      <div>{props.RentalData.rentalData.hostInfo.name} is a superhost </div>
+      <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
+      <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
+      <div>short write up: {props.RentalData.rentalData.quickDetail.writtenDescription.brief}</div>
       
   
       <div className={style.readMore}>Read more about the space </div>
@@ -39,8 +28,11 @@ const DescriptionMainContainer = (props) => {
       <div>Amenities </div>
       <div className='style.readMore'>Show all 35 amenities </div>
     </div>
+  }
+
+  return ( 
+    <div> {toShow} </div>
   )
-  
 }
 
 export default DescriptionMainContainer;
