@@ -36,8 +36,8 @@ class Index extends React.Component {
 
   componentDidMount() {
     $.get("http://localhost:3000/getData", (data) => {
-      // this.setState({RentalData: data})
-      console.log(data)
+      // this.setState(data[0])
+      console.log({...data[0]}) 
     })
   }
 
@@ -51,28 +51,3 @@ class Index extends React.Component {
 }
 
 ReactDOM.render(<Index/>, document.getElementById('like_button_container') )
-
-
-
-
-[{
-entireRental: {numOfGuest: "3", numOfBedroom: 4, numOfBeds: 1, numOfBathroom: 3},
-hostInfo:{name: "laborum", superhost: false},
-
-  quickDetail:{
-    BedAndBath: [4],
-    RecentGuest5StarCheckIn: 2,
-    amenities: {basics: Array(2), essentials: Array(2)},
-    checkInRating: 2,
-    dining: ["quas"],
-    facilities: ["extra pillows"],
-    greatLoction: {exists: false, description: "debitis"},
-    guestAccess: ["et"],
-    logistics: ["nemo"],
-    outDoor: ["debitis"],
-    recentSparklingCleanVotes: 1,
-    safteyFeature: ["sit"],
-    selfCheckin_lockBox: true,
-    writtenDescription: {brief: "dolorem", theSpace: "ipsa", guestAccess: "voluptatibus", interactionWithGuest: "modi", otherThingsToNote: "aut"}
-  }
-}]
