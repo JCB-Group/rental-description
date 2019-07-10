@@ -7,19 +7,22 @@ const DescriptionMainContainer = (props) => {
 
   if(Object.keys(props.RentalData).length > 0){
     toShow = 
-    <div>
-      <div>title</div>
-      <div>
-        <div>Entire Apartment</div>
-        <div>{props.RentalData.rentalData.entireRental.numOfGuest} guests</div>
-        <div>{props.RentalData.rentalData.entireRental.numOfBedroom} bedroom</div>
-        <div>{props.RentalData.rentalData.entireRental.numOfBeds} beds</div>
-        <div>{props.RentalData.rentalData.entireRental.numOfBathroom} baths</div>    
+    <div className={style.mainContainer}>
+      <h1>title</h1>
+      <div className={style.entireContainer}>
+        <div className={style.entireTitle}>Entire Apartment</div>
+        <div className={style.entireDetails}>
+          <div>{props.RentalData.rentalData.entireRental.numOfGuest} guests <span>&#183;</span></div>
+          <div>{props.RentalData.rentalData.entireRental.numOfBedroom} bedroom <span>&#183;</span></div>
+          <div>{props.RentalData.rentalData.entireRental.numOfBeds} beds <span>&#183;</span></div>
+          <div>{props.RentalData.rentalData.entireRental.numOfBathroom} baths</div>  
+        </div>
       </div>
 
       <div>{props.RentalData.rentalData.hostInfo.name} is a superhost </div>
       <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
       <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
+      <hr/>
       <div>short write up: {props.RentalData.rentalData.quickDetail.writtenDescription.brief}</div>
       
   
