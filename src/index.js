@@ -31,7 +31,9 @@ class Index extends React.Component {
           otherThingsToNote: "aut"
         }
       }
-    }]};
+    }],
+    readMore: false
+  };
   }
 
   componentDidMount() {
@@ -44,7 +46,7 @@ class Index extends React.Component {
   render(){
     return (
       <div>
-        <DescriptionMainContainer RentalData={this.state.RentalData}/>
+        <DescriptionMainContainer readMore={this.state.readMore} RentalData={this.state.RentalData}/>
       </div>
     )
   }
