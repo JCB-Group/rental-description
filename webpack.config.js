@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
+  watch: true,
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
@@ -12,24 +13,19 @@ module.exports = {
         test   :/\.jsx?$/,
         exclude:/(node_modules|bower_components)/,
         loader :'babel-loader',
-        query  :{
-            presets:['@babel/preset-react', '@babel/preset-env' ]
-        }
       },
       {
         test: /\.css$/,
-        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-      },
+        loader: 'style-loader'
+      }, {
+        test: /\.css$/,
+        loader: 'css-loader',
+        options: {
+          modules: true,
+        }
+      }
     ]
   },
-    // module: {
-    //   rules: [
-    //     {
-    //       test: /\.css$/,
-    //       use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-    //     },
-    //   ],
-    // }
 };
 
 

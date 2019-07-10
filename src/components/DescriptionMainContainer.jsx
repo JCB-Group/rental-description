@@ -1,5 +1,6 @@
 import React from 'react';
-import './DescriptionMainContainer.css'
+import style from './DescriptionMainContainer.css'
+
 
 const DescriptionMainContainer = (props) => {
   // console.log(props.RentalData.typeof())
@@ -13,10 +14,7 @@ const DescriptionMainContainer = (props) => {
   // console.log(props.RentalData[0].entireRental)
   //this is a test
 
-
   return ( 
-   
-  
     <div>
       <div>title</div>
       <div>
@@ -36,10 +34,10 @@ const DescriptionMainContainer = (props) => {
       <div>short write up: {props.RentalData[0].quickDetail.writtenDescription.brief}</div>
       
   
-      <div className='readMore'>Read more about the space </div>
-      <div className='readMore'>Contact host </div>
+      <div className={style.readMore}>Read more about the space </div>
+      <div className='style.readMore'>Contact host </div>
       <div>Amenities </div>
-      <div className='readMore'>Show all 35 amenities </div>
+      <div className='style.readMore'>Show all 35 amenities </div>
     </div>
   )
   
