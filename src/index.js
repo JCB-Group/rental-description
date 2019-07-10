@@ -6,9 +6,11 @@ import $ from 'jquery';
 class Index extends React.Component {
   constructor(props){
     super(props);
+
     this.state = {}
   };
   
+
   componentDidMount() {
     $.get("http://localhost:3000/getData", (data) => {
       // this.setState({data[0]})
@@ -25,7 +27,9 @@ class Index extends React.Component {
   render(){
     return (
       <div>
+
         <DescriptionMainContainer RentalData={this.state}/>
+
       </div>
     )
   }

@@ -1,7 +1,38 @@
+.mainContainer{
+  max-width: 50%;
+  padding: 3%;
+  font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+.entireContainer{
+  padding-bottom: 3%;
+}
+
+.entireTitle {
+  display: block;
+  font-weight: bold;
+}
+
+.entireDetails{
+  display: flex;
+  padding-right: 1%;
+  margin-right: 3%;
+}
+
+.writeUp{
+  padding: 3% 0;
+}
 .readMore{
-  color: blue
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .readMore:hover { 
   text-decoration: underline;
+
+}
+
+.Amenities{
+  padding: 3% 0;
 }

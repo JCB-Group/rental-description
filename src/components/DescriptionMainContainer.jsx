@@ -24,9 +24,11 @@ const DescriptionMainContainer = (props) => {
       
   
       <div className={style.readMore}>Read more about the space </div>
-      <div className='style.readMore'>Contact host </div>
-      <div>Amenities </div>
-      <div className='style.readMore'>Show all 35 amenities </div>
+      <div className={style.readMore}>Contact host </div>
+      <hr/>
+      <div className={style.Amenities}>Amenities </div>
+      <div className={style.readMore}>Show all 35 amenities </div>
+      <hr/>
     </div>
   }
 
