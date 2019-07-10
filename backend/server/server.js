@@ -1,54 +1,74 @@
 const express = require('express')
 const app = express()
 const port = 3000
+var bodyParser = require('body-parser')
 // const seedData = require("./seed");
 app.use(express.static('dist'));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 var mongoose = require('mongoose');
 
-// mongoose.connect('mongodb://localhost/FEC', {useNewUrlParser: true});
+app.get('/getData', (req, res) => {
+  // res.send('Hello World! it;s 6:30 pm Monday July8th')
 
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//   console.log('mongo is connected')
+  mongoose.connect('mongodb://localhost/FEC', {useNewUrlParser: true});
 
-//   var rentalSchema = new mongoose.Schema({
-//     entireRental: {
-//       numOfGuest: Number,
-//       numOfBedroom: Number,
-//       numOfBeds: Number,
-//       numOfBathroom: Number
-//     }
-//   });
+  var db = mongoose.connection;
+  db.on('error', console.error.bind(console, 'connection error:'));
+  db.once('open', function() {
+    console.log('mongo is connected')
 
-//   var RentalData = mongoose.model('RentalData', rentalSchema);
+    var rentalSchema = new mongoose.Schema({
+      entireRental: {
+        numOfGuest: String,
+        numOfBedroom: Number,
+        numOfBeds: Number,
+        numOfBathroom: Number
+      },
+      hostInfo: {
+          name: String, 
+          superhost: Boolean
+        },
+      quickDetail: { 
+        recentSparklingCleanVotes: Number, 
+        checkInRating: Number, 
+        selfCheckin_lockBox: Boolean,
+        RecentGuest5StarCheckIn: Number,
+        greatLoction: {
+          exists: Boolean,
+          description: String
+        },
+        writtenDescription: {
+          brief: String,
+          theSpace: String,
+          guestAccess: String,
+          interactionWithGuest: String,
+          otherThingsToNote: String,
+          licenseRegistration: String
+        },
+        amenities: {
+          basics: [String],
+          essentials: [String],
+        },
+        facilities: [String],
+        logistics: [String],     
+        dining: [String],     
+        guestAccess: [String], 
+        BedAndBath: [String],
+        outDoor: [String],
+        safteyFeature:[String]
+      },
+    });
 
-//   var sf = new RentalData({     
-//     entireRental: {
-//     numOfGuest: 2,
-//     numOfBedroom: 2,
-//     numOfBeds: 2,
-//     numOfBathroom: 2
-//    } 
-//   });
+    var RentalData = mongoose.model('RentalData', rentalSchema);
 
-//   sf.save(function (err, sf) {
-//     if (err) return console.error(err);
-//   });
-
-//   // RentalData.find(function (err, RentalData) {
-//   //   if (err) return console.error(err);
-//   //   console.log(RentalData);
-//   // })
-// });
-
-
-
-app.get('/', (req, res) => {
-  seedData.seedData()
-  // res.send('Hello World! it;s 9:305 am Monday July8th at 10:58am')
+    RentalData.find(function (err, RentalData) {
+      if (err) return console.error(err);
+      res.send(RentalData);
+    })
+  });
 });
 
 
