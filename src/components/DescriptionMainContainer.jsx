@@ -28,7 +28,13 @@ const DescriptionMainContainer = (props) => {
   if(Object.keys(props.RentalData).length > 1){
     toShow = 
     <div className={style.mainContainer}>
-      <h1>title</h1>
+      <h1>{props.RentalData.rentalData.detailHead.title}</h1>
+      <div className={style.detailHeadCityAndPhoto}>
+        <div>{props.RentalData.rentalData.detailHead.city}</div>
+        <img src ={props.RentalData.rentalData.detailHead.photoUrl} alt="host photo" height="42" />
+      </div>
+      
+
       <div className={style.entireContainer}>
         <div className={style.entireTitle}>Entire Apartment</div>
         <div className={style.entireDetails}>
