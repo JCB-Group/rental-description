@@ -13,14 +13,8 @@ class Index extends React.Component {
 
   componentDidMount() {
     $.get("http://localhost:3000/getData", (data) => {
-      // this.setState({data[0]})
-      // console.log(data[0])
-      console.log({test: "hello it is 12:22"})
-
+      console.log(data[0])
       this.setState({rentalData: data[0]})
-      // this.setState({data[0]})
-
-      
     })
   }
 
