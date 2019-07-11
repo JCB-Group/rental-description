@@ -7,11 +7,7 @@ const quickDetailHeader = (props) => {
   let count = 0;
   let superHost = null
 
-<<<<<<< Updated upstream
   if(props.RentalData.rentalData.quickDetail.superhost) {
-=======
-  if(props.RentalData.rentalData.hostInfo.superhost) {
->>>>>>> Stashed changes
 
     superHost = 
     <div>
@@ -22,7 +18,6 @@ const quickDetailHeader = (props) => {
   }
   return (
     <div>
-<<<<<<< Updated upstream
       <div>{superHost}</div>
       {/* // need to figure out how to make this render these dynamically rather then hard coding 
       each component in this section. I know the first thing I need to do is restructure my data base 
@@ -32,16 +27,6 @@ const quickDetailHeader = (props) => {
       // going to try and get all the merges completes first. then pull to update this file.
       // and then start from there. Reconfigueing the data base now will mess allllll sorts of stuff
      up */}
-=======
-      <div>Hello from quickDetailHeader {props.RentalData.rentalData.entireRental.numOfGuest}</div>
-      <div>{superHost}</div>
-      {/* // need to figure out how to make this render these dynamically rather then hard coding each component
-      // in this section. I know the first thing I need to do is restructure my data base so all these
-      // the state for this component is in one object. Right now hostInfo is i a seperate obj than the
-      //rest of the state for this component. 
-      // going to try and get all the merges completes first. then pull to update this file.
-      // and then start from there. Reconfigueing the data base now will mess allllll sorts of stuff up */}
->>>>>>> Stashed changes
 
     </div>
   )
