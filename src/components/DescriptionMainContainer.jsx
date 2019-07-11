@@ -11,13 +11,13 @@ const DescriptionMainContainer = (props) => {
     writeUp = 
     <div>
       <div className={style.readMoreSubSectionTitles}>The Space</div>
-      <div>{props.RentalData.rentalData.quickDetail.writtenDescription.theSpace}</div>
+      <div>{props.RentalData.rentalData.writtenDescription.theSpace}</div>
       <div className={style.readMoreSubSectionTitles}>Guest Access</div>
-      <div>{props.RentalData.rentalData.quickDetail.writtenDescription.guestAccess}</div>
+      <div>{props.RentalData.rentalData.writtenDescription.guestAccess}</div>
       <div className={style.readMoreSubSectionTitles}>Interaction with guests</div>
-      <div>{props.RentalData.rentalData.quickDetail.writtenDescription.interactionWithGuest}</div>
+      <div>{props.RentalData.rentalData.writtenDescription.interactionWithGuest}</div>
       <div className={style.readMoreSubSectionTitles}>Other things to note</div>
-      <div>{props.RentalData.rentalData.quickDetail.writtenDescription.otherThingsToNote}</div>
+      <div>{props.RentalData.rentalData.writtenDescription.otherThingsToNote}</div>
     </div>
 
     readMoreLink = "Hide"
@@ -52,7 +52,7 @@ const DescriptionMainContainer = (props) => {
       <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
       <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
       <hr/>
-      <div>short write up: {props.RentalData.rentalData.quickDetail.writtenDescription.brief}</div>
+      <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
       <div>{writeUp}</div>
       
   
