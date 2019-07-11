@@ -3,6 +3,14 @@
   padding: 3%;
   font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
 }
+.detailHeadCityAndPhoto{
+  display: flex;
+  justify-content: space-between
+}
+
+img {
+  border-radius: 50%;
+}
 
 .entireContainer{
   padding-bottom: 3%;
@@ -26,6 +34,11 @@
   color: blue;
   cursor: pointer;
   font-weight: bold;
+}
+
+.readMoreSubSectionTitles{
+  font-weight: bold;
+  padding: 3% 0
 }
 
 .readMore:hover { 

@@ -7,13 +7,19 @@ class Index extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = {}
+    this.state = {
+      readMore: false
+    }
+    this.readMoreHandler = this.readMoreHandler.bind(this)
   };
+
+  readMoreHandler() {
+    this.setState({readMore: !this.state.readMore})
+  }
   
 
   componentDidMount() {
     $.get("http://localhost:3000/getData", (data) => {
-      console.log(data[0])
       this.setState({rentalData: data[0]})
     })
   }
@@ -22,7 +28,7 @@ class Index extends React.Component {
     return (
       <div>
 
-        <DescriptionMainContainer RentalData={this.state}/>
+        <DescriptionMainContainer readMoreHandler={this.readMoreHandler} RentalData={this.state}/>
 
       </div>
     )
