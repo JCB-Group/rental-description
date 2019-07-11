@@ -28,6 +28,11 @@
   font-weight: bold;
 }
 
+.readMoreSubSectionTitles{
+  font-weight: bold;
+  padding: 3% 0
+}
+
 .readMore:hover { 
   text-decoration: underline;
 
