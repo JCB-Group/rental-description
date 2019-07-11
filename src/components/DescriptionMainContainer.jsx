@@ -60,9 +60,8 @@ const DescriptionMainContainer = (props) => {
       <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
       <div className={style.readMore}>Contact host </div>
       <hr/>
-      <div className={style.Amenities}>Amenities </div>
-      <div className={style.readMore}>Show all 35 amenities </div>
-      <hr/>
+      
+      
     </div>
   }
 
