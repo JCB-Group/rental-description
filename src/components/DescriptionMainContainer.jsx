@@ -8,7 +8,7 @@ const DescriptionMainContainer = (props) => {
 
   if(props.RentalData.readMore){
    
-    writeUp = 
+    writeUp = (
     <div>
       <div className={style.readMoreSubSectionTitles}>The Space</div>
       <div>{props.RentalData.rentalData.quickDetail.writtenDescription.theSpace}</div>
@@ -19,6 +19,7 @@ const DescriptionMainContainer = (props) => {
       <div className={style.readMoreSubSectionTitles}>Other things to note</div>
       <div>{props.RentalData.rentalData.quickDetail.writtenDescription.otherThingsToNote}</div>
     </div>
+    );
 
     readMoreLink = "Hide"
 
