@@ -76,7 +76,11 @@ var faker = require('faker');// this is faker NPM. Will help create random data
       },
       hostInfo: {name: faker.fake("{{lorem.word}}")},
       quickDetail: { 
+<<<<<<< Updated upstream
         hostInfo: {name: faker.fake("{{lorem.word}}")},
+=======
+        superhost: faker.random.boolean(),
+>>>>>>> Stashed changes
         recentSparklingCleanVotes: faker.random.number({min:1, max:4}), 
         checkInRating: faker.random.number({min:1, max:4}), 
         selfCheckin_lockBox: faker.random.boolean(),
