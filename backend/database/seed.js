@@ -16,6 +16,11 @@ var faker = require('faker');// this is faker NPM. Will help create random data
 
 
     var rentalSchema = new mongoose.Schema({
+      detailHead:{
+        title: String,
+        photoUrl: String,
+        city: String
+      },
       entireRental: {
         numOfGuest: String,
         numOfBedroom: Number,
@@ -65,7 +70,12 @@ var faker = require('faker');// this is faker NPM. Will help create random data
 
     var RentalData = mongoose.model('RentalData', rentalSchema);
 
-    var sf = new RentalData({     
+    var sf = new RentalData({ 
+      detailHead:{
+        title: faker.fake("{{lorem.word}}"),
+        photoUrl: 'https://a0.muscache.com/im/pictures/7043e35d-08bf-4f64-b2dd-b9d821b40461.jpg?aki_policy=profile_x_medium',
+        city: faker.fake("{{lorem.word}}")
+      },    
       entireRental: {
         numOfGuest: faker.random.number({min:1, max:4}),
         numOfBedroom: faker.random.number({min:1, max:4}),
