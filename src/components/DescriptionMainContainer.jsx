@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './DescriptionMainContainer.css'
+import QuickDetailHeader from './QuickDetailHeader.jsx'
 
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
@@ -43,9 +44,11 @@ const DescriptionMainContainer = (props) => {
           <div>{props.RentalData.rentalData.entireRental.numOfBeds} beds <span>&#183;</span></div>
           <div>{props.RentalData.rentalData.entireRental.numOfBathroom} baths</div>  
         </div>
+
+        <QuickDetailHeader RentalData={props.RentalData}/>
       </div>
 
-      <div>{props.RentalData.rentalData.hostInfo.name} is a superhost </div>
+      {/* <div>{props.RentalData.rentalData.hostInfo.name} is a superhost </div> */}
       <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
       <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
       <hr/>

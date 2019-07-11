@@ -27,11 +27,9 @@ var faker = require('faker');// this is faker NPM. Will help create random data
         numOfBeds: Number,
         numOfBathroom: Number
       },
-      hostInfo: {
-          name: String, 
-          superhost: Boolean
-        },
+      hostInfo: {name: String},
       quickDetail: { 
+        superhost: Boolean,
         recentSparklingCleanVotes: Number, 
         checkInRating: Number, 
         selfCheckin_lockBox: Boolean,
@@ -51,20 +49,14 @@ var faker = require('faker');// this is faker NPM. Will help create random data
         amenities: {
           basics: [String],
           essentials: [String],
+          facilities: [String],
+          logistics: [String],
+          dining: [String],
+          guestAccess: [String],
+          BedAndBath: [String],
+          outDoor: [String],
+          safteyFeature:[String]
         },
-        facilities: [String],
-    
-        logistics: [String],
-        
-        dining: [String],
-        
-        guestAccess: [String],
-    
-        BedAndBath: [String],
-    
-        outDoor: [String],
-        
-        safteyFeature:[String]
       },
     });
 
@@ -82,11 +74,9 @@ var faker = require('faker');// this is faker NPM. Will help create random data
         numOfBeds: faker.random.number({min:1, max:4}),
         numOfBathroom: faker.random.number({min:1, max:4})
       },
-      hostInfo: {
-        name: faker.fake("{{lorem.word}}"), 
-        superhost: faker.random.boolean()
-      },
+      hostInfo: {name: faker.fake("{{lorem.word}}")},
       quickDetail: { 
+        hostInfo: {name: faker.fake("{{lorem.word}}")},
         recentSparklingCleanVotes: faker.random.number({min:1, max:4}), 
         checkInRating: faker.random.number({min:1, max:4}), 
         selfCheckin_lockBox: faker.random.boolean(),
@@ -106,20 +96,14 @@ var faker = require('faker');// this is faker NPM. Will help create random data
         amenities: {
           basics: [faker.fake("{{lorem.word}}"), faker.fake("{{lorem.word}}")],
           essentials: [faker.fake("{{lorem.word}}"), faker.fake("{{lorem.word}}")],
+          facilities: ["extra pillows"],
+          logistics: [faker.fake("{{lorem.word}}")],
+          dining: [faker.fake("{{lorem.word}}")],
+          guestAccess: [faker.fake("{{lorem.word}}")],
+          BedAndBath: [faker.fake("{{lorem.word}}")],
+          outDoor: [faker.fake("{{lorem.word}}")],
+          safteyFeature:[faker.fake("{{lorem.word}}")]
         },
-        facilities: ["extra pillows"],
-    
-        logistics: [faker.fake("{{lorem.word}}")],
-        
-        dining: [faker.fake("{{lorem.word}}")],
-        
-        guestAccess: [faker.fake("{{lorem.word}}")],
-    
-        BedAndBath: [faker.fake("{{lorem.word}}")],
-    
-        outDoor: [faker.fake("{{lorem.word}}")],
-        
-        safteyFeature:[faker.fake("{{lorem.word}}")]
       },
     });
 
