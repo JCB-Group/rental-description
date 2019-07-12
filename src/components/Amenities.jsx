@@ -13,7 +13,7 @@ const Amenities = (props) => {
       
       for(var key in obj){
         if(obj[key].length > 0){
-          const amenitiesToDisplay = obj[key].map(amenitie => {
+          amenitiesToDisplay = obj[key].map(amenitie => {
             // <div>{amenitie}</div> 
             console.log(amenitie)
           })
@@ -30,7 +30,7 @@ const Amenities = (props) => {
       <div className={style.Amenities}>Amenities </div>
       <div onClick={props.showMoreAmenitiesHandler} className={style.readMore}>Show all 30 amenities </div>
       <div>{amenitiesToDisplay}</div>
-      <amenitiesToDisplay/>
+      {/* <amenitiesToDisplay/> */}
       <hr/>
     </div>
   }
