@@ -10,8 +10,10 @@ class Index extends React.Component {
 
     this.state = {
       readMore: false,
+      showMoreAmenities: false,
     };
     this.readMoreHandler = this.readMoreHandler.bind(this);
+    this.showMoreAmenitiesHandler = this.showMoreAmenitiesHandler.bind(this);
   }
 
   componentDidMount() {
