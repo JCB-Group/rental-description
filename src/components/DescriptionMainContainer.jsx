@@ -7,6 +7,7 @@ import DescriptionMainHeader from './DescriptionMainHeader.jsx';
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
   let readMoreLink = 'Read more about the space';
+
   if (props.RentalData && props.RentalData.readMore) {
     writeUp = <ReadMore RentalData={props.RentalData} />;
     readMoreLink = 'Hide';
@@ -15,7 +16,7 @@ const DescriptionMainContainer = (props) => {
   let toShow = 'loading.........';
   if (Object.keys(props.RentalData).length > 2) {
     toShow = (
-      
+
       <div className={style.mainContainer}>
         <DescriptionMainHeader RentalData={props.RentalData} />
 

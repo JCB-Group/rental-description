@@ -14,12 +14,14 @@ db.once('open', () => {
       photoUrl: 'https://a0.muscache.com/im/pictures/7043e35d-08bf-4f64-b2dd-b9d821b40461.jpg?aki_policy=profile_x_medium',
       city: faker.fake('{{lorem.word}}'),
     },
+
     entireRental: {
       numOfGuest: faker.random.number({ min: 1, max: 4 }),
       numOfBedroom: faker.random.number({ min: 1, max: 4 }),
       numOfBeds: faker.random.number({ min: 1, max: 4 }),
       numOfBathroom: faker.random.number({ min: 1, max: 4 }),
     },
+
     hostInfo: { name: faker.fake('{{lorem.word}}') },
     quickDetail: {
       superhost: faker.random.boolean(),
@@ -30,8 +32,9 @@ db.once('open', () => {
       greatLoction: {
         exists: faker.random.boolean(),
         description: faker.fake('{{lorem.word}}'),
-      }
+      },
     },
+
     amenities: {
       basics: [faker.fake('{{lorem.word}}'), faker.fake('{{lorem.word}}')],
       essentials: [faker.fake('{{lorem.word}}'), faker.fake('{{lorem.word}}')],
@@ -45,12 +48,12 @@ db.once('open', () => {
     },
 
     writtenDescription: {
-      brief: faker.fake("{{lorem.word}}"),
-      theSpace: faker.fake("{{lorem.word}}"),
-      guestAccess: faker.fake("{{lorem.word}}"),
-      interactionWithGuest: faker.fake("{{lorem.word}}"),
-      otherThingsToNote: faker.fake("{{lorem.word}}"),
-      licenseRegistration: faker.fake("{{lorem.word}}")
+      brief: faker.fake('{{lorem.word}}'),
+      theSpace: faker.fake('{{lorem.word}}'),
+      guestAccess: faker.fake('{{lorem.word}}'),
+      interactionWithGuest: faker.fake('{{lorem.word}}'),
+      otherThingsToNote: faker.fake('{{lorem.word}}'),
+      licenseRegistration: faker.fake('{{lorem.word}}'),
     },
   });
 
