@@ -5,7 +5,7 @@ import QuickDetailHeader from './QuickDetailHeader.jsx'
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
   let readMoreLink = 'Read more about the space';
-
+   
   if (props.RentalData && props.RentalData.readMore) {
     writeUp = (
       <div>
@@ -51,6 +51,7 @@ const DescriptionMainContainer = (props) => {
       <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
         <div>{writeUp}</div>
         <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
+
         <div className={style.readMore}>Contact host </div>
         <hr />
       </div>

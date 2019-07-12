@@ -30,26 +30,27 @@ db.once('open', () => {
       greatLoction: {
         exists: faker.random.boolean(),
         description: faker.fake('{{lorem.word}}'),
-      },
-      writtenDescription: {
-        brief: faker.fake('{{lorem.word}}'),
-        theSpace: faker.fake('{{lorem.word}}'),
-        guestAccess: faker.fake('{{lorem.word}}'),
-        interactionWithGuest: faker.fake('{{lorem.word}}'),
-        otherThingsToNote: faker.fake('{{lorem.word}}'),
-        licenseRegistration: faker.fake('{{lorem.word}}'),
-      },
-      amenities: {
-        basics: [faker.fake('{{lorem.word}}'), faker.fake('{{lorem.word}}')],
-        essentials: [faker.fake('{{lorem.word}}'), faker.fake('{{lorem.word}}')],
-        facilities: ['extra pillows'],
-        logistics: [faker.fake('{{lorem.word}}')],
-        dining: [faker.fake('{{lorem.word}}')],
-        guestAccess: [faker.fake('{{lorem.word}}')],
-        BedAndBath: [faker.fake('{{lorem.word}}')],
-        outDoor: [faker.fake('{{lorem.word}}')],
-        safteyFeature: [faker.fake('{{lorem.word}}')],
-      },
+      }
+    },
+    amenities: {
+      basics: [faker.fake('{{lorem.word}}'), faker.fake('{{lorem.word}}')],
+      essentials: [faker.fake('{{lorem.word}}'), faker.fake('{{lorem.word}}')],
+      facilities: ['extra pillows'],
+      logistics: [faker.fake('{{lorem.word}}')],
+      dining: [faker.fake('{{lorem.word}}')],
+      guestAccess: [faker.fake('{{lorem.word}}')],
+      BedAndBath: [faker.fake('{{lorem.word}}')],
+      outDoor: [faker.fake('{{lorem.word}}')],
+      safteyFeature: [faker.fake('{{lorem.word}}')],
+    },
+
+    writtenDescription: {
+      brief: faker.fake("{{lorem.word}}"),
+      theSpace: faker.fake("{{lorem.word}}"),
+      guestAccess: faker.fake("{{lorem.word}}"),
+      interactionWithGuest: faker.fake("{{lorem.word}}"),
+      otherThingsToNote: faker.fake("{{lorem.word}}"),
+      licenseRegistration: faker.fake("{{lorem.word}}")
     },
   });
 
