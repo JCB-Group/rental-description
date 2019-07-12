@@ -1,29 +1,17 @@
 import React from 'react';
 import style from './DescriptionMainContainer.css';
 import QuickDetailHeader from './QuickDetailHeader.jsx'
+import ReadMore from './ReadMore.jsx';
 
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
   let readMoreLink = 'Read more about the space';
-   
   if (props.RentalData && props.RentalData.readMore) {
-    writeUp = (
-      <div>
-        <div className={style.readMoreSubSectionTitles}>The Space</div>
-        <div>{props.RentalData.rentalData.writtenDescription.theSpace}</div>
-        <div className={style.readMoreSubSectionTitles}>Guest Access</div>
-        <div>{props.RentalData.rentalData.writtenDescription.guestAccess}</div>
-        <div className={style.readMoreSubSectionTitles}>Interaction with guests</div>
-        <div>{props.RentalData.rentalData.writtenDescription.interactionWithGuest}</div>
-        <div className={style.readMoreSubSectionTitles}>Other things to note</div>
-        <div>{props.RentalData.rentalData.writtenDescription.otherThingsToNote}</div>
-      </div>
-    );
+    writeUp = <ReadMore RentalData={props.RentalData} />;
     readMoreLink = 'Hide';
   }
 
   let toShow = 'loading.........';
-
   if (Object.keys(props.RentalData).length > 2) {
     toShow = (
       <div className={style.mainContainer}>
@@ -48,11 +36,10 @@ const DescriptionMainContainer = (props) => {
         <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
         <hr/>
         <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
-          <div>{writeUp}</div>
-          <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
-          <div className={style.readMore}>Contact host </div>
-          <hr />
-        
+        <div>{writeUp}</div>
+        <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
+        <div className={style.readMore}>Contact host </div>
+        <hr />
       </div>
     );
   }
