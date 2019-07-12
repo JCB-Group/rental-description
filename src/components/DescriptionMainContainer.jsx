@@ -2,6 +2,7 @@ import React from 'react';
 import style from './DescriptionMainContainer.css';
 import QuickDetailHeader from './QuickDetailHeader.jsx'
 import ReadMore from './ReadMore.jsx';
+import DescriptionMainHeader from './DescriptionMainHeader.jsx';
 
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
@@ -14,12 +15,9 @@ const DescriptionMainContainer = (props) => {
   let toShow = 'loading.........';
   if (Object.keys(props.RentalData).length > 2) {
     toShow = (
+      
       <div className={style.mainContainer}>
-        <h1>{props.RentalData.rentalData.detailHead.title}</h1>
-        <div className={style.detailHeadCityAndPhoto}>
-          <div>{props.RentalData.rentalData.detailHead.city}</div>
-          <img src ={props.RentalData.rentalData.detailHead.photoUrl} alt="host photo" height="42" />
-        </div>
+        <DescriptionMainHeader RentalData={props.RentalData} />
 
         <div className={style.entireContainer}>
           <div className={style.entireTitle}>Entire Apartment</div>
