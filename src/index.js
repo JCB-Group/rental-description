@@ -31,7 +31,7 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <DescriptionMainContainer RentalData={this.state} />
+        <DescriptionMainContainer readMoreHandler={this.readMoreHandler}  RentalData={this.state} />
         <Amenities RentalData={this.state} showMoreAmenitiesHandler={this.showMoreAmenitiesHandler} />
       </div>
     );
