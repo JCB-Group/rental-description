@@ -19,13 +19,12 @@ const DescriptionMainContainer = (props) => {
         <div>{props.RentalData.rentalData.writtenDescription.otherThingsToNote}</div>
       </div>
     );
-
     readMoreLink = 'Hide';
   }
 
   let toShow = 'loading.........';
 
-  if (Object.keys(props.RentalData).length > 1) {
+  if (Object.keys(props.RentalData).length > 2) {
     toShow = (
       <div className={style.mainContainer}>
         <h1>{props.RentalData.rentalData.detailHead.title}</h1>
@@ -45,15 +44,15 @@ const DescriptionMainContainer = (props) => {
           <QuickDetailHeader RentalData={props.RentalData} />
         </div>
 
-      <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
-      <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
-      <hr/>
-      <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
-        <div>{writeUp}</div>
-        <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
-
-        <div className={style.readMore}>Contact host </div>
-        <hr />
+        <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
+        <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
+        <hr/>
+        <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
+          <div>{writeUp}</div>
+          <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
+          <div className={style.readMore}>Contact host </div>
+          <hr />
+        
       </div>
     );
   }
