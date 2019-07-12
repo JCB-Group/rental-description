@@ -1,0 +1,21 @@
+.mainContainer{
+  max-width: 50%;
+  padding: 3%;
+  font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+}
+
+.readMore{
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.readMore:hover { 
+  text-decoration: underline;
+}
+
+
+.Amenities{
+  padding: 3% 0;
+}
+
