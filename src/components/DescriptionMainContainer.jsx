@@ -49,25 +49,12 @@ const DescriptionMainContainer = (props) => {
       <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
       <hr/>
       <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
-<<<<<<< HEAD
-      <div>{writeUp}</div>
-      
-  
-      <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
-      <div className={style.readMore}>Contact host </div>
-      <hr/>
-      <div className={style.Amenities}>Amenities </div>
-      <div className={style.readMore}>Show all 35 amenities </div>
-      <hr/>
-    </div>
-=======
         <div>{writeUp}</div>
         <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
         <div className={style.readMore}>Contact host </div>
         <hr />
       </div>
     );
->>>>>>> dd0f4f5e5260de5684fce972903b7b525896b67b
   }
 
   return (
