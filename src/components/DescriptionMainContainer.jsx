@@ -3,6 +3,7 @@ import style from './DescriptionMainContainer.css';
 import QuickDetailHeader from './QuickDetailHeader.jsx'
 import ReadMore from './ReadMore.jsx';
 import DescriptionMainHeader from './DescriptionMainHeader.jsx';
+import Amenities from './Amenities.jsx';
 
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
@@ -39,6 +40,11 @@ const DescriptionMainContainer = (props) => {
         <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
         <div className={style.readMore}>Contact host </div>
         <hr />
+        {/* <Amenities RentalData={RentalData={props.RentalData}} showMoreAmenitiesHandler={this.showMoreAmenitiesHandler} /> */}
+        <Amenities RentalData={props.RentalData} showMoreAmenitiesHandler={props.showMoreAmenitiesHandler} />
+
+        {/* <Amenities /> */}
+
       </div>
     );
   }
