@@ -13,16 +13,9 @@ img {
   padding-bottom: 3%;
 }
 
-.entireTitle {
-  display: block;
-  font-weight: bold;
-}
 
-.entireDetails{
-  display: flex;
-  padding-right: 1%;
-  margin-right: 3%;
-}
+
+
 
 .writeUp{
   padding: 3% 0;

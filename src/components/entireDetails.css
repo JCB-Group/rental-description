@@ -1,0 +1,10 @@
+.entireDetails{
+  display: flex;
+  padding-right: 1%;
+  margin-right: 3%;
+}
+
+.entireTitle {
+  display: block;
+  font-weight: bold;
+}

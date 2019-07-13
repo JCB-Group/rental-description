@@ -4,6 +4,7 @@ import QuickDetailHeader from './QuickDetailHeader.jsx'
 import ReadMore from './ReadMore.jsx';
 import DescriptionMainHeader from './DescriptionMainHeader.jsx';
 import Amenities from './Amenities.jsx';
+import EntireDetails from './entireDetails.jsx';
 
 const DescriptionMainContainer = (props) => {
   let writeUp = null;
@@ -20,31 +21,17 @@ const DescriptionMainContainer = (props) => {
 
       <div className={style.mainContainer}>
         <DescriptionMainHeader RentalData={props.RentalData} />
-
         <div className={style.entireContainer}>
-          <div className={style.entireTitle}>Entire Apartment</div>
-          <div className={style.entireDetails}>
-            <div>{props.RentalData.rentalData.entireRental.numOfGuest} guests <span>&#183;</span></div>
-            <div>{props.RentalData.rentalData.entireRental.numOfBedroom} bedroom <span>&#183;</span></div>
-            <div>{props.RentalData.rentalData.entireRental.numOfBeds} beds <span>&#183;</span></div>
-            <div>{props.RentalData.rentalData.entireRental.numOfBathroom} baths</div>
-          </div>
+          <EntireDetails RentalData={props.RentalData} />
           <QuickDetailHeader RentalData={props.RentalData} />
         </div>
-
-        <div>self check in: {props.RentalData.rentalData.quickDetail.selfCheckin_lockBox}</div>
-        <div>sparkeling clean votes: {props.RentalData.rentalData.quickDetail.recentSparklingCleanVotes}</div>
         <hr/>
         <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
         <div>{writeUp}</div>
         <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
         <div className={style.readMore}>Contact host </div>
         <hr />
-        {/* <Amenities RentalData={RentalData={props.RentalData}} showMoreAmenitiesHandler={this.showMoreAmenitiesHandler} /> */}
         <Amenities RentalData={props.RentalData} showMoreAmenitiesHandler={props.showMoreAmenitiesHandler} />
-
-        {/* <Amenities /> */}
-
       </div>
     );
   }
