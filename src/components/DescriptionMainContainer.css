@@ -2,8 +2,8 @@
   max-width: 50%;
   padding: 3%;
   font-family:"lucida grande", tahoma, verdana, arial, sans-serif;
+  font-size: 11px;
 }
-
 
 img {
   border-radius: 50%;
@@ -12,10 +12,6 @@ img {
 .entireContainer{
   padding-bottom: 3%;
 }
-
-
-
-
 
 .writeUp{
   padding: 3% 0;
@@ -33,6 +29,4 @@ img {
 
 .readMore:hover { 
   text-decoration: underline;
-
 }
-
