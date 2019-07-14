@@ -26,7 +26,7 @@ const DescriptionMainContainer = (props) => {
           <QuickDetailHeader RentalData={props.RentalData} />
         </div>
         <hr/>
-        <div>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
+        <div className={style.writeUp}>short write up: {props.RentalData.rentalData.writtenDescription.brief}</div>
         <div>{writeUp}</div>
         <div onClick={props.readMoreHandler} className={style.readMore}>{readMoreLink} </div>
         <div className={style.readMore}>Contact host </div>
