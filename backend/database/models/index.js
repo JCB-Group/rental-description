@@ -13,6 +13,15 @@ const rentalSchema = new mongoose.Schema({
     numOfBathroom: Number,
   },
   hostInfo: { name: String },
+  writtenDescription: {
+    brief: String,
+    theSpace: String,
+    guestAccess: String,
+    interactionWithGuest: String,
+    otherThingsToNote: String,
+    licenseRegistration: String,
+  },
+
   quickDetail: {
     superhost: Boolean,
     recentSparklingCleanVotes: Number,
@@ -23,25 +32,18 @@ const rentalSchema = new mongoose.Schema({
       exists: Boolean,
       description: String,
     },
-    writtenDescription: {
-      brief: String,
-      theSpace: String,
-      guestAccess: String,
-      interactionWithGuest: String,
-      otherThingsToNote: String,
-      licenseRegistration: String,
-    },
-    amenities: {
-      basics: [String],
-      essentials: [String],
-      facilities: [String],
-      logistics: [String],
-      dining: [String],
-      guestAccess: [String],
-      BedAndBath: [String],
-      outDoor: [String],
-      safteyFeature: [String],
-    },
+  },
+
+  amenities: {
+    basics: [String],
+    essentials: [String],
+    facilities: [String],
+    logistics: [String],
+    dining: [String],
+    guestAccess: [String],
+    BedAndBath: [String],
+    outDoor: [String],
+    safteyFeature: [String],
   },
 });
 
