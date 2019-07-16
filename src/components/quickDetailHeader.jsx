@@ -17,6 +17,9 @@ const quickDetailHeader = (props) => {
       <div>
         <div className={style.title}> {props.RentalData.rentalData.hostInfo.name} is a superHost</div>
         <div className={style.info}>Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.</div>
+        <i className="fas fa-camera"></i>
+        <i className="fas fa-camera"></i>
+        <span className="fas fa-camera"></span>
       </div>
     );
   }
