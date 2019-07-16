@@ -6,7 +6,7 @@ module.exports = {
   mode: 'development',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: '/Users/Chad/hr2019/rentalDescriptionProxy/frontEnd',
   },
   module: {
     rules: [
