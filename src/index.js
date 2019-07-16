@@ -17,7 +17,7 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    $.get('http://localhost:3000/getData', (data) => {
+    $.get('/getData', (data) => {
       this.setState({ rentalData: data[0] });
     });
   }
@@ -39,4 +39,6 @@ class Index extends React.Component {
   }
 }
 
-ReactDOM.render(<Index />, document.getElementById('like_button_container'));
+// ReactDOM.render(<Index />, document.getElementById('like_button_container'));
+ReactDOM.render(<Index />, document.getElementById('rentalDescriptions'));
+
