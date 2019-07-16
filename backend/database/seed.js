@@ -23,6 +23,7 @@ db.once('open', () => {
     },
 
     hostInfo: { name: faker.fake('{{lorem.word}}') },
+
     quickDetail: {
       superhost: faker.random.boolean(),
       recentSparklingCleanVotes: faker.random.number({ min: 1, max: 4 }),
