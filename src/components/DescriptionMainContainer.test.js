@@ -50,6 +50,8 @@ describe('Find 1 h1', () => {
   });
 });
 
+// pip: add a click test or a state change test
+
 // this test work v //
 // describe('Examining the syntax of Jest tests', () => {
 //   it('sums numbers', () => {
