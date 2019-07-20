@@ -3,7 +3,7 @@ const db = require('../database/database');
 const RentalData = require('../database/models/index');
 
 const app = express();
-const port = 80;
+const port = 2000;
 
 app.use(express.static('dist'));
 app.use(express.json());
