@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "start": "node './backend/server/server.js'",
+    "start:docker": "npm start",
     "test": "jest --coverage",
     "build": "webpack",
     "seed": "node './backend/database/seed.js'",
