@@ -1,6 +1,10 @@
 *.log
 node_modules
 dist/main.js
+.gitignore
+.elasticbeanstalk/
+
+
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
