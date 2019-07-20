@@ -3,6 +3,7 @@ node_modules
 dist/main.js
 .gitignore
 .elasticbeanstalk/
+CharChar.pem
 
 
 # Elastic Beanstalk Files
