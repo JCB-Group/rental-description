@@ -1,12 +1,12 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   watch: true,
   mode: 'development',
   output: {
     filename: 'main.js',
-    path: '/Users/Chad/hr2019/rentalDescriptionProxy/frontEnd',
+    path: '/Users/Chad/hr2019/rental-description/dist',
   },
   module: {
     rules: [

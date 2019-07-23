@@ -3,7 +3,7 @@ const db = require('../database/database');
 const RentalData = require('../database/models/index');
 
 const app = express();
-const port = 3000;
+const port = 2000;
 
 app.use(express.static('dist'));
 app.use(express.json());
@@ -16,5 +16,5 @@ app.get('/getData', (req, res) => {
     res.send(response);
   });
 });
-
+console.log('updated server launched1');
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

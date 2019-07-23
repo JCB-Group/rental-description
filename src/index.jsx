@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import DescriptionMainContainer from './components/DescriptionMainContainer.jsx';
-import Amenities from './components/Amenities.jsx';
+
 
 class Index extends React.Component {
   constructor(props) {
@@ -23,7 +23,8 @@ class Index extends React.Component {
   }
 
   showMoreAmenitiesHandler() {
-    this.setState({ showMoreAmenities: !this.state.showMoreAmenities });
+    const { showMoreAmenities } = this.state;
+    this.setState({ showMoreAmenities: !showMoreAmenities });
   }
 
   readMoreHandler() {
@@ -33,12 +34,14 @@ class Index extends React.Component {
   render() {
     return (
       <div>
-        <DescriptionMainContainer readMoreHandler={this.readMoreHandler} showMoreAmenitiesHandler={this.showMoreAmenitiesHandler}  RentalData={this.state} />
+        <DescriptionMainContainer
+          readMoreHandler={this.readMoreHandler}
+          showMoreAmenitiesHandler={this.showMoreAmenitiesHandle}
+          RentalData={this.state}
+        />
       </div>
     );
   }
 }
-
 // ReactDOM.render(<Index />, document.getElementById('like_button_container'));
 ReactDOM.render(<Index />, document.getElementById('rentalDescriptions'));
-
