@@ -9,7 +9,8 @@
     "test": "jest --coverage",
     "build": "webpack",
     "seed": "node './backend/database/seed.js'",
-    "server": "nodemon './backend/server/server.js'"
+    "server": "nodemon './backend/server/server.js'",
+    "dockerBuild": "bash buildDocker.sh"
   },
   "keywords": [],
   "author": "",

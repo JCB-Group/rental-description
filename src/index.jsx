@@ -23,7 +23,8 @@ class Index extends React.Component {
   }
 
   showMoreAmenitiesHandler() {
-    this.setState({ showMoreAmenities: !this.state.showMoreAmenities });
+    const { showMoreAmenities } = this.state;
+    this.setState({ showMoreAmenities: !showMoreAmenities });
   }
 
   readMoreHandler() {
@@ -35,7 +36,7 @@ class Index extends React.Component {
       <div>
         <DescriptionMainContainer
           readMoreHandler={this.readMoreHandler}
-          showMoreAmenitiesHandler={this.showMoreAmenitiesHandler}
+          showMoreAmenitiesHandler={this.showMoreAmenitiesHandle}
           RentalData={this.state}
         />
       </div>

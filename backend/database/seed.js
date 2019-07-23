@@ -63,8 +63,8 @@ db.once('open', () => {
     db.close();
   });
 
-  RentalData.find((err, RentalData) => {
-    if (err) return console.error(err);
-    console.log(RentalData);
-  });
+  // RentalData.find((err, RentalData) => {
+  //   if (err) return console.error(err);
+  //   console.log(RentalData);
+  // });
 });
